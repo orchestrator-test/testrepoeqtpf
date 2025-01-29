@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: testrepoeqtpf
+  description: testrepoeqtpf description
+  annotations:
+    argocd/app-selector: rht-gitops.com/janus-argocd=testrepoeqtpf
+    backstage.io/kubernetes-namespace: orchestrator-gitops
+    backstage.io/kubernetes-id: testrepoeqtpf-ci
+    janus-idp.io/tekton: testrepoeqtpf
+    github.com/project-slug: orchestrator-test/testrepoeqtpf
+    gitlab.com/project-slug: orchestrator-test/testrepoeqtpf
+spec:
+  type: workflow-project
+  system: system:default/janus-orchestrator
+  lifecycle: development
+  owner: user:default/guest
